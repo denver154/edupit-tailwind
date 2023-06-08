@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply mx-auto p-[1.5rem] w-full max-w-[140rem] lg:max-w-[80rem];
+}
+
+      /* ------------------- scroll to top speed------------------- */
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color:#0EB482;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+      #myBtn:hover {
+        background-color: black;
+      }
+      html {
+        scroll-behavior: smooth
+      }
+
+
+
+
+@layer components{
+.allmenu{
+    @apply bg-primary
+}    
+.branding img{
+    @apply mx-auto py-[1rem]
+}
+.whatsmenu {
+    @apply py-[1rem] mx-[1rem] flex justify-between text-white 
+}
+.whatsmenu h1{
+    @apply text-[1.1rem] font-extrabold
+}
+
+
+
+
+.toggle__menu.open span{
+    @apply z-10 bg-white
+}
+
+.toggle__menu span{
+    @apply w-[1.5rem] h-[.3rem] bg-white block transition ease-in-out duration-500
+}
+
+.toggle__menu span:nth-child(2){
+    @apply my-[.2rem]
+}
+
+.toggle__menu.open span:first-child{
+    @apply translate-y-[8px] rotate-[-230deg] transition ease-in-out duration-500;
+}
+
+.toggle__menu.open span:nth-child(2){
+    @apply opacity-0 transition ease-in-out duration-500;
+}
+
+.toggle__menu.open span:last-child{
+    @apply translate-y-[-8px] rotate-[230deg] transition ease-in-out duration-500;
+}
+
+
+
+.branding{
+    @apply flex justify-between items-center;
+}
+.branding ul li{
+    @apply py-2;
+}
+.branding ul li i{
+    @apply text-primary mr-2;
+}
+.header__nav{
+    @apply   max-h-0 overflow-hidden  
+}
+.header__nav ul{
+    @apply transition-all;
+}
+.header__nav ul li{
+    @apply my-1  transition-all;
+}
+.header__nav ul li a{
+    @apply flex items-center relative justify-between p-4  hover:text-white hover:bg-primary  transition-all;
+}
+.header__nav ul li a span{
+    @apply hidden w-full h-[.3rem]  absolute bg-primary -left-5 opacity-0;
+}
+.header__nav li:hover a span{
+    @apply left-0 opacity-100 transition-all;
+}
+.header__nav ul li:hover .dropdown{
+    @apply  opacity-100 transition-all;
+}
+.header__nav ul li a {
+    @apply  transition-all;
+}
+.header__nav ul li a span.open{
+    @apply rotate-180 transition-all;
+}
+.header__nav.open{
+    @apply duration-500 transition-all max-h-fit;
+}
+.dropdown{
+    @apply max-h-0 bg-white overflow-hidden transition-all duration-500;
+}
+.dropdown ul{
+    @apply flex-col my-3 lg:mx-3;
+}
+.dropdown ul li{
+    @apply lg:border-t-0;
+}
+.dropdown ul li a{
+    @apply h-[1rem] px-10 py-5;
+}
+.dropdown.open{
+    @apply max-h-full transition-all;
+}
+
+
+/*-----------------------newsletter----------------------*/
+.mc4wp-form-fields placeholder{
+    @apply outline-none
+}
+
+/*-----------------------middle-footer----------------------*/
+.footer__middle {
+    @apply bg-dark
+}
+.description__area img{
+    @apply mx-auto pt-[12rem] pb-[2rem]
+}
+.description__area p{
+    @apply pb-[1rem] text-[1.2rem] 
+}
+.middle__row{
+    @apply text-center text-white
+}
+.social-icons i{
+    @apply border-[1px] border-white p-[.5rem] rounded hover:bg-primary transition-all
+}
+.nav_menu1 h2{
+    @apply text-[1.5rem] font-bold pt-[2rem] pb-[1.5rem]
+}
+.menu__container ul li a{
+    @apply text-[1.2rem]
+}
+.menu__container ul li {
+    @apply pb-[1rem] hover:text-primary transition-all
+}
+.custom__html h2{
+    @apply text-[1.5rem] pt-[1.5rem] pb-[1rem]
+}
+.witr_sub_table{
+    @apply flex justify-between text-[1.2rem] pb-[8px] border-b-[1px] mb-[8px]
+}
+
+/*-----------------------footer----------------------*/
+.footer-bottom{
+    @apply relative bg-dark text-white pt-[3rem]
+}
+.copy-right-text{
+    @apply flex justify-center pb-[1rem] pt-[1rem]
+}
+.text-right{
+    @apply flex justify-center gap-[1rem] 
+}
+.text-right li{
+    @apply  hover:text-primary transition-all
+}
+.row{
+    @apply border-t-[1px]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
