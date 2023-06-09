@@ -995,8 +995,6 @@ video {
   position: relative;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
   height: 3px;
   width: 90px;
   border-radius: 30px;
@@ -1065,7 +1063,6 @@ video {
 }
 
 .gallery {
-  position: relative;
   display: flex;
   height: -moz-fit-content;
   height: fit-content;
@@ -1073,23 +1070,12 @@ video {
   padding-bottom: 5rem;
 }
 
-@media (min-width: 1024px) {
-  .gallery {
-    width: 100%;
-  }
-}
-
 .gallery__wrapper {
-  margin-left: 1rem;
-  margin-right: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
 }
 
 .gallery__item__img {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   height: -moz-fit-content;
@@ -1107,14 +1093,6 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-}
-
-@media (min-width: 1024px) {
-  .gallery__item__img:hover img {
-    --tw-scale-x: 1.05;
-    --tw-scale-y: 1.05;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
 }
 
 /*-----------------------facility----------------------*/
@@ -1337,6 +1315,10 @@ video {
   .container {
     max-width: 80rem;
   }
+}
+
+.gallery .tns-outer {
+  max-width: 20rem;
 }
 
 .text__stroke {
