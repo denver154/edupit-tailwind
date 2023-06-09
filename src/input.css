@@ -5,6 +5,10 @@
 .container{
     @apply mx-auto p-[1.5rem] w-full max-w-[140rem] lg:max-w-[80rem];
 }
+.text__stroke {
+    -webkit-text-stroke: 4px #ffffff;
+    text-stroke: 4px #ffffff;
+  }
 
       /* ------------------- scroll to top speed------------------- */
 
@@ -135,11 +139,142 @@
     @apply max-h-full transition-all;
 }
 
+/*-----------------------banner----------------------*/
+.banner{
+    @apply relative bg-bannerbg bg-center h-[70vh]
+}
+.branding img{
+    @apply absolute top-[4rem] right-0 
+}
+.banner__bg__text{
+    @apply absolute top-[25%] left-0 opacity-20;
+}
+.banner__bg__text h4{
+    @apply text-transparent text-[4rem] font-bold opacity-50 
+}
+.banner__text{
+    @apply z-50 py-[10rem];
+}
+.banner__text h1{
+    @apply text-[1.5rem] pb-[1rem] text-white font-bold w-[18rem] text-center mx-auto
+}
+.banner__text p{
+    @apply text-white w-[28rem] mx-auto text-center font-semibold
+}
+.banner__btn{
+    @apply flex justify-center gap-[1rem] mt-[3.5rem]
+}
+.banner__btn a{
+    @apply text-white bg-primary py-[1rem] px-[1.5rem] rounded text-[1rem] hover:bg-black hover:text-white transition-all
+}
+.banner__btn a:last-child{
+    @apply bg-transparent  border-[1px] border-primary text-primary py-[1rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
+}
+
+/*-----------------------banner__slider----------------------*/
+.slider__card{
+    @apply border-[2px] border-primary py-[4rem] px-[5rem] hover:border-transparent hover:shadow-2xl rounded border-opacity-30 transition-all
+}
+.slider__card img{
+    @apply mx-auto pb-[1rem]
+}
+.slider__text{
+    @apply text-center
+} 
+.slider__card h1{
+    @apply text-textcolor text-[1.5rem] font-bold hover:text-primary  transition-all
+}
+.slider__card p{
+    @apply text-[1rem] text-primary
+}
+
+
+
+/*-----------------------school----------------------*/
+.school__text h1:first-child{
+    @apply text-primary pt-[2rem] text-[1.4rem] font-semibold
+}
+.school__text h1{
+    @apply text-textcolor text-[1.4rem] font-bold 
+}
+.school__text{
+    @apply pb-[2rem]
+}
+.other__hand{
+    @apply text-textcolor
+}
+.other__hand p{
+    @apply text-textcolor pb-[2rem]  border-primary border-l-[3px]  pl-[1rem]
+}
+.success h1{
+    @apply pt-[2rem] font-extrabold text-textcolor
+}
+
+.success__bar{
+    @apply my-[10px]; 
+}
+.success__bar__circle{
+    @apply h-[3px] w-[90px] bg-primary my-0 mx-auto relative rounded-[30px]
+}
+.success__bar__circle::before{
+    @apply content-[""] absolute left-0 top-[50%] transform translate-y-[-50%] border-primary border-[6px] rounded-[50%] bg-[#1c1b1b] animate-sliding1
+}
+.success__bar__circle::after{
+    @apply content-[""] absolute right-0 top-[50%] transform translate-y-[-50%] border-primary border-[6px] rounded-[50%] bg-[#1c1b1b] animate-sliding2
+}
+
+
+.gallery{
+    @apply relative flex flex-col  lg:w-full h-fit pb-[5rem]
+}
+.gallery__text{
+    @apply mx-auto  mb-[2rem] px-[5rem] py-[.5rem] text-[1.5rem] font-semibold;
+}
+.gallery__wrapper{
+    @apply flex items-center justify-center mx-[1rem] pb-[2rem] ;
+}
+.gallery__item__img{
+    @apply relative h-fit overflow-hidden  mx-auto ;
+}
+.gallery__item__img img{
+    @apply  transition-all duration-500;
+}
+.gallery__item__img:hover img{
+    @apply lg:scale-105 transition-all duration-500 ;
+}
+
+
+
+
+/*-----------------------facility----------------------*/
+.facility__text h1{
+    @apply text-primary text-[1.5rem] font-extrabold text-center
+}
+.facility__text p{
+    @apply text-[1.5rem] text-textcolor font-extrabold pb-[2rem] w-[25rem] text-center mx-auto
+}
+.facility__card{
+    @apply border-opacity-30 mb-[2rem] border-[2px] rounded border-primary py-[3rem] text-center hover:border-transparent hover:shadow transition-all
+}
+.facility__card img{
+    @apply mx-auto pb-[1rem]
+}
+.card__text a{
+    @apply text-[1.5rem] text-textcolor font-bold hover:text-primary transition-all
+}
+.card__text p{
+    @apply text-[1rem] text-grayy
+}
+
 
 /*-----------------------newsletter----------------------*/
-.mc4wp-form-fields placeholder{
-    @apply outline-none
+/* .news__letter{
+    @apply bg-primary m-[2rem] absolute
 }
+
+.mc4wp-form-fields input{
+    @apply outline-none
+} */
 
 /*-----------------------middle-footer----------------------*/
 .footer__middle {
@@ -178,13 +313,13 @@
     @apply relative bg-dark text-white pt-[3rem]
 }
 .copy-right-text{
-    @apply flex justify-center pb-[1rem] pt-[1rem]
+    @apply flex justify-center pb-[1rem] pt-[1rem] text-[1rem]
 }
 .text-right{
-    @apply flex justify-center gap-[1rem] 
+    @apply flex justify-center  gap-[1rem] 
 }
 .text-right li{
-    @apply  hover:text-primary transition-all
+    @apply  hover:text-primary transition-all text-[1rem]
 }
 .row{
     @apply border-t-[1px]
