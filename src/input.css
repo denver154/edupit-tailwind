@@ -177,7 +177,7 @@
 
 /*-----------------------banner__slider----------------------*/
 .slider__card{
-    @apply border-[2px] border-primary py-[4rem] px-[5rem] hover:border-transparent hover:shadow-2xl rounded border-opacity-30 transition-all
+    @apply border-[2px] border-primary py-[4rem] px-[2rem] hover:shadow-2xl rounded border-opacity-30 transition-all
 }
 .slider__card img{
     @apply mx-auto pb-[1rem]
@@ -195,11 +195,12 @@
 
 
 /*-----------------------school----------------------*/
+
 .school__text h1:first-child{
     @apply text-primary pt-[2rem] text-[1.4rem] font-semibold
 }
 .school__text h1{
-    @apply text-textcolor text-[1.4rem] font-bold 
+    @apply text-textcolor text-[1.4rem] font-bold
 }
 .school__text{
     @apply pb-[2rem]
@@ -247,18 +248,76 @@
     @apply transition-all duration-500 ;
 }
 
+ /* ------------------TODAY-------------------- */
+ .today__wrapper h6{
+    @apply text-[1.5rem] font-bold text-primary lg:text-center
+}
+.today__wrapper h3{
+    @apply text-[1.62rem] font-bold text-textcolor mb-[2rem] lg:text-center;
+}
+.today__cards{
+    @apply flex flex-col gap-[3rem] lg:grid lg:grid-cols-[_1fr,_1fr,_1fr]
+}
+.today__cards__item{
+    @apply relative shadow-xl rounded-md;
+}
+.today__item__text{
+    @apply flex flex-col gap-[.5rem] mt-[1.5rem];
+}
+.today__item__text h5{
+    @apply text-dark text-[1.2rem] font-semibold mx-[1.5rem] hover:text-primary hover:duration-300;
+}
+.today__ratings{
+    @apply flex items-center gap-3 mx-[1.5rem];
+}
+.today__ratings ul{
+    @apply flex gap-1;
+}
+.today__ratings p{
+    @apply text-[1.2rem] text-gray-400;
+}
+.today__ratings p span{
+    @apply italic;
+}
+.author{
+    @apply flex items-center gap-3 pb-[1.5rem] border-b;
+}
+.author img{
+    @apply w-8 rounded-full ml-[1.5rem];
+}
+.author p{
+    @apply text-[#777777] font-semibold mr-[1.5rem];
+}
+.author p span{
+    @apply text-[#4b5981];
+}
+.price{
+    @apply flex items-center justify-between mb-[1rem] mt-[.5rem] mx-[1.5rem];
+}
+.price p:first-child{
+    @apply text-dark text-[1rem] font-semibold;
+}
+.img__text i{
+    @apply absolute bg-white p-[.5rem] top-3 right-5 text-[1.5rem] rounded-sm
+}
+.img__text p{
+    @apply absolute text-[1.2rem] text-white px-[.5rem] py-[.2rem] top-3 left-3 bg-primary rounded-md
+}
 
 
 
 /*-----------------------facility----------------------*/
 .facility__text h1{
     @apply text-primary text-[1.5rem] font-extrabold text-center
+    lg:text-[16px]
 }
 .facility__text p{
     @apply text-[1.5rem] text-textcolor font-extrabold pb-[2rem] w-[25rem] text-center mx-auto
+    lg:text-[40px] lg:w-[50rem]
 }
 .facility__card{
     @apply border-opacity-30 mb-[2rem] border-[2px] rounded border-primary py-[3rem] text-center hover:border-transparent hover:shadow transition-all
+    lg:w-[17rem]
 }
 .facility__card img{
     @apply mx-auto pb-[1rem]
@@ -269,16 +328,26 @@
 .card__text p{
     @apply text-[1rem] text-grayy
 }
+.facility__item{
+    @apply lg:grid lg:grid-cols-4
+}
 
 
 /*-----------------------newsletter----------------------*/
-/* .news__letter{
-    @apply bg-primary m-[2rem] absolute
+.news__letter{
+    @apply bg-primary m-[2rem] rounded h-[20rem]
 }
-
+.news__title h2{
+    @apply text-white text-[27px] font-semibold
+}
+.news__title p{
+    @apply text-white
+}
 .mc4wp-form-fields input{
     @apply outline-none
-} */
+}
+
+
 
 /*-----------------------middle-footer----------------------*/
 .footer__middle {
@@ -286,12 +355,14 @@
 }
 .description__area img{
     @apply mx-auto pt-[12rem] pb-[2rem]
+    lg:pt-[1.8rem]
 }
 .description__area p{
     @apply pb-[1rem] text-[1.2rem] 
 }
 .middle__row{
     @apply text-center text-white
+    lg:grid lg:grid-cols-4
 }
 .social-icons i{
     @apply border-[1px] border-white p-[.5rem] rounded hover:bg-primary transition-all
@@ -307,6 +378,7 @@
 }
 .custom__html h2{
     @apply text-[1.5rem] pt-[1.5rem] pb-[1rem]
+    lg:pt-[2rem]
 }
 .witr_sub_table{
     @apply flex justify-between text-[1.2rem] pb-[8px] border-b-[1px] mb-[8px]
@@ -321,12 +393,14 @@
 }
 .text-right{
     @apply flex justify-center  gap-[1rem] 
+    
 }
 .text-right li{
     @apply  hover:text-primary transition-all text-[1rem]
 }
 .row{
     @apply border-t-[1px]
+lg:flex lg:justify-between lg:items-center
 }
 
 
