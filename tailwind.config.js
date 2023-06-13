@@ -10,6 +10,7 @@ module.exports = {
         green:"#31AF36",
         grayy:"#777777",
         edupit:"#123A67",
+        lightpri:'#dbf4ec',
       },
       keyframes: {
         sliding1:{

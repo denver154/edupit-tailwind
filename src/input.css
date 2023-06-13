@@ -304,6 +304,38 @@
     @apply absolute text-[1.2rem] text-white px-[.5rem] py-[.2rem] top-3 left-3 bg-primary rounded-md
 }
 
+/*-----------------------instructors----------------------*/
+.instructors__cards{
+    @apply border-[2px] border-primary border-opacity-30 py-[3rem] rounded hover:border-transparent hover:shadow transition-all
+}
+.instructors__title span{
+    @apply text-primary text-[1.5rem] font-extrabold
+}
+.instructors__title h1{
+    @apply pb-[3rem] text-[1.5rem] text-textcolor w-[18rem] font-extrabold
+}
+.instructors__cards img{
+    @apply mx-auto 
+}
+.instructors__name{
+    @apply text-center py-[1rem]
+}
+.instructors__name a{
+    @apply font-semibold text-textcolor hover:text-primary transition-all
+}
+.instructors__name p{
+    @apply text-[15px] text-gray-400
+}
+.instructors__icons{
+    @apply flex justify-center 
+}
+.instructors__icons ul{
+    @apply flex gap-[.5rem]
+}
+.instructors__icons ul li{
+    @apply text-primary items-center text-center hover:text-white bg-lightpri hover:bg-primary w-[2rem] h-[2rem] rounded transition-all
+}
+
 
 
 /*-----------------------facility----------------------*/
@@ -331,6 +363,70 @@
 .facility__item{
     @apply lg:grid lg:grid-cols-4
 }
+
+
+/*-----------------------latest----------------------*/
+.latest__title span{
+@apply text-[1.5rem] text-primary font-extrabold
+}
+.latest__title h1{
+    @apply  text-[1.5rem] text-textcolor font-extrabold w-[25rem] pb-[3rem]
+}
+.latest__card img{
+    @apply h-[24rem] w-[100%] 
+}
+.latest__item{
+    @apply flex gap-[2rem]
+}
+.latest__name {
+    @apply border-[1px] border-gray-300 border-opacity-30 h-[15rem] pl-[1rem] hover:shadow-xl transition-all 
+}
+.latest__name h1{
+    @apply pt-[2rem] pb-[1rem] text-textcolor font-semibold hover:text-primary transition-all
+}
+.latest__date ul{
+    @apply flex gap-[1rem] text-primary text-[1rem] pb-[2rem]
+}
+.latest__btn a{
+    @apply text-[1.2rem] text-textcolor border-[1px]  border-opacity-30 py-[.8rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
+}
+
+/*-----------------------textimonail----------------------*/
+.testimonail__title{
+    @apply text-center text-[25px] py-[3rem]
+}
+.testimonail__title span{
+    @apply text-primary font-extrabold
+}
+.testimonail__title h1{
+    @apply text-textcolor font-extrabold 
+}
+.testimonail__card{
+    @apply px-[1rem] 
+}
+.testimonail__card p{
+    @apply text-gray-500 w-[25rem]  pb-[1rem]
+}
+.testimonail__icons ul{
+    @apply flex text-primary gap-[.5rem] pb-[1.5rem]
+}
+.teacher img{
+    @apply w-[3.8rem] h-[3.8rem]
+}
+.teacher{
+    @apply flex gap-[1rem]
+}
+.teacher__name{
+    @apply items-center 
+}
+.teacher__name h1{
+    @apply text-[17px] font-semibold text-textcolor
+}
+.teacher__name p{
+    @apply text-[16px] font-semibold text-primary
+}
+
+
 
 
 /*-----------------------newsletter----------------------*/
@@ -365,7 +461,7 @@
     lg:grid lg:grid-cols-4
 }
 .social-icons i{
-    @apply border-[1px] border-white p-[.5rem] rounded hover:bg-primary transition-all
+    @apply border-[1px] border-white h-[2.2rem] w-[2.2rem] items-center leading-[36px] text-center rounded hover:bg-primary transition-all
 }
 .nav_menu1 h2{
     @apply text-[1.5rem] font-bold pt-[2rem] pb-[1.5rem]
