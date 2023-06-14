@@ -1932,6 +1932,63 @@ video {
   justify-content: space-between;
 }
 
+/*-----------------------onlinepage----------------------*/
+
+.onlinepage__title {
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.onlinepage__title span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(14 181 130 / var(--tw-text-opacity));
+}
+
+.onlinepage__title h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(42 55 76 / var(--tw-text-opacity));
+}
+
+.page__branding {
+  border-width: 2px;
+  border-color: rgb(14 181 130 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.25;
+}
+
+.admin {
+  margin: 2rem;
+}
+
+.admin p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(14 181 130 / var(--tw-text-opacity));
+}
+
+.admin a {
+  width: 25rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(42 55 76 / var(--tw-text-opacity));
+  transition-duration: 500ms;
+}
+
+.admin a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 181 130 / var(--tw-text-opacity));
+}
+
 /*-----------------------newsletter----------------------*/
 
 .news__letter {
@@ -2153,7 +2210,7 @@ video {
 /* ------------------- scroll to top speed------------------- */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
 }
 

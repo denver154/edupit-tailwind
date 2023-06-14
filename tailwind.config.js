@@ -39,6 +39,10 @@ module.exports = {
         'bannerbg': 'url("./img/slider__bg.jpg")',
         'bannerimg1': 'url("./img/bannerlogo.jpg")',
         'bannerimg2': 'url("./img/bannerlogo2)'
+      },
+
+      fontFamily:{
+        'Raleway' :['Raleway', 'sans-serif']
       }
 
 

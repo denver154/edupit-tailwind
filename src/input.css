@@ -17,7 +17,7 @@
       /* ------------------- scroll to top speed------------------- */
 
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Raleway, sans-serif;
         font-size: 20px;
       }
       #myBtn {
@@ -565,6 +565,28 @@
     @apply flex justify-between absolute top-[100%]
 }
 
+/*-----------------------onlinepage----------------------*/
+.onlinepage__title{
+    @apply text-center pb-[1.5rem]
+}
+.onlinepage__title span{
+    @apply font-extrabold text-[1.5rem] text-primary
+}
+.onlinepage__title h1{
+    @apply text-textcolor font-extrabold text-[1.5rem] w-[25rem] mx-auto
+}
+.page__branding{
+    @apply border-[2px] border-primary border-opacity-25
+}
+.admin{
+    @apply m-[2rem]
+}
+.admin p{
+    @apply py-[1rem] text-primary font-semibold text-[1.2rem]
+}
+.admin a{
+    @apply text-[1.5rem] font-extrabold w-[25rem] text-textcolor hover:text-primary duration-500
+}
 
 
 
