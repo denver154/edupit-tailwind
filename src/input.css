@@ -59,9 +59,6 @@
     @apply text-[1.1rem] font-extrabold
 }
 
-
-
-
 .toggle__menu.open span{
     @apply z-10 bg-white
 }
@@ -85,8 +82,6 @@
 .toggle__menu.open span:last-child{
     @apply translate-y-[-8px] rotate-[230deg] transition ease-in-out duration-500;
 }
-
-
 
 .branding{
     @apply flex justify-between items-center;
@@ -143,39 +138,57 @@
     @apply max-h-full transition-all;
 }
 
+
+
+/*-----------------------first__header----------------------*/
+.imahe img{
+    @apply mx-auto
+}
+
+
 /*-----------------------banner----------------------*/
 .banner{
-    @apply relative bg-bannerbg bg-center h-[70vh]
+    @apply relative bg-bannerbg bg-center bg-no-repeat lg:h-[100vh]
 }
 .branding img{
-    @apply absolute top-[4rem] right-0 
+    @apply hidden absolute 
+    lg:top-[5rem] lg:right-[5rem] lg:flex 
 }
 .banner__bg__text{
-    @apply absolute top-[25%] left-0 opacity-20;
+    @apply absolute top-[25%] left-0 opacity-20
+    lg:left-[14.5rem] 
 }
 .banner__bg__text h4{
-    @apply text-transparent text-[4rem] font-bold opacity-50 
+    @apply text-transparent text-[4rem] font-bold opacity-50
+    lg:text-[8rem] 
 }
 .banner__text{
-    @apply z-50 py-[10rem];
+    @apply z-50 py-[10rem] 
 }
 .banner__text h1{
     @apply text-[1.5rem] pb-[1rem] text-white font-bold w-[18rem] text-center mx-auto
+    lg:text-[60px] lg:w-[45rem] lg:text-left lg:mx-0
 }
 .banner__text p{
     @apply text-white w-[28rem] mx-auto text-center font-semibold
+    lg:text-[20px] lg:w-[40rem] lg:text-left lg:mx-0
 }
 .banner__btn{
     @apply flex justify-center gap-[1rem] mt-[3.5rem]
+    lg:justify-start
+   
 }
 .banner__btn a{
-    @apply text-white bg-primary py-[1rem] px-[1.5rem] rounded text-[1rem] hover:bg-black hover:text-white transition-all
+    @apply duration-700 text-white bg-primary py-[1rem] px-[1.5rem] rounded text-[1rem] hover:bg-black hover:text-white transition-all
+    
 }
 .banner__btn a:last-child{
-    @apply bg-transparent  border-[1px] border-primary text-primary py-[1rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
+    @apply duration-700 bg-transparent  border-[1px] border-primary text-primary py-[1rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
+
 }
 
 /*-----------------------banner__slider----------------------*/
+
 .slider__card{
     @apply border-[2px] border-primary py-[4rem] px-[2rem] hover:shadow-2xl rounded border-opacity-30 transition-all
 }
@@ -186,7 +199,7 @@
     @apply text-center
 } 
 .slider__card h1{
-    @apply text-textcolor text-[1.5rem] font-bold hover:text-primary  transition-all
+    @apply duration-500 text-textcolor text-[1.5rem] font-bold hover:text-primary  transition-all
 }
 .slider__card p{
     @apply text-[1rem] text-primary
@@ -195,26 +208,36 @@
 
 
 /*-----------------------school----------------------*/
+.school__wrapper{
+    @apply lg:gap-[5rem] 
+    lg:grid lg:grid-cols-2 lg:items-center 
 
+}
 .school__text h1:first-child{
     @apply text-primary pt-[2rem] text-[1.4rem] font-semibold
+    lg:text-[16px] lg:pb-0
 }
 .school__text h1{
     @apply text-textcolor text-[1.4rem] font-bold
+    lg:text-[40px] lg:font-extrabold lg:pb-[2rem]
 }
 .school__text{
-    @apply pb-[2rem]
+    @apply pb-[2rem]  
 }
 .other__hand{
     @apply text-textcolor
+    
 }
 .other__hand p{
     @apply text-textcolor pb-[2rem]  border-primary border-l-[3px]  pl-[1rem]
+    lg:pt-[1rem]
+}
+.other__hand span{
+    @apply lg:text-[17px]
 }
 .success h1{
     @apply pt-[2rem] font-extrabold text-textcolor
 }
-
 .success__bar{
     @apply my-[10px]; 
 }
@@ -230,23 +253,31 @@
 
 
 .gallery{
-    @apply flex flex-col  h-fit pb-[5rem]
+    @apply flex flex-col  h-fit pb-[5rem] 
+     lg:pb-0
+}
+.gallery__item{
+    @apply lg:w-[100%] lg:gap-[2rem]
 }
 .gallery__text{
     @apply mx-auto  mb-[2rem] px-[5rem] py-[.5rem] text-[1.5rem] font-semibold;
 }
 .gallery__wrapper{
-    @apply flex items-center;
+    @apply flex items-center
+    
 }
 .gallery__item__img{
-    @apply h-fit overflow-hidden  mx-auto ;
+    @apply h-fit overflow-hidden  mx-auto pt-[4rem]  
+    lg:pt-[3rem] lg:w-[5rem];
 }
 .gallery__item__img img{
-    @apply transition-all duration-500;
+    @apply transition-all duration-500
+    
 }
 .gallery__item__img:hover img{
     @apply transition-all duration-500 ;
 }
+
 
  /* ------------------TODAY-------------------- */
  .today__wrapper h6{
@@ -314,6 +345,9 @@
 .instructors__title h1{
     @apply pb-[3rem] text-[1.5rem] text-textcolor w-[18rem] font-extrabold
 }
+.instructors__items{
+    @apply flex gap-[2rem]
+}
 .instructors__cards img{
     @apply mx-auto 
 }
@@ -333,9 +367,11 @@
     @apply flex gap-[.5rem]
 }
 .instructors__icons ul li{
-    @apply text-primary items-center text-center hover:text-white bg-lightpri hover:bg-primary w-[2rem] h-[2rem] rounded transition-all
+    @apply duration-500 text-primary items-center text-center hover:text-white bg-lightpri hover:bg-primary w-[2rem] h-[2rem] rounded transition-all
 }
-
+.instructors .tns-controls{
+    @apply flex justify-end
+}
 
 
 /*-----------------------facility----------------------*/
@@ -390,25 +426,37 @@
 .latest__btn a{
     @apply text-[1.2rem] text-textcolor border-[1px]  border-opacity-30 py-[.8rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
 }
+.latest .tns-controls{
+    @apply flex justify-end
+}
 
 /*-----------------------textimonail----------------------*/
 .testimonail__title{
-    @apply text-center text-[25px] py-[3rem]
+    @apply relative
+}
+.testimonail__wrapper {
+    @apply lg:grid lg:grid-cols-2
+}
+.testimonail__title{
+    @apply text-[25px] py-[3rem] 
+}
+.first___title{
+    @apply text-center
 }
 .testimonail__title span{
-    @apply text-primary font-extrabold
+    @apply text-primary font-extrabold 
 }
 .testimonail__title h1{
-    @apply text-textcolor font-extrabold 
+    @apply  text-textcolor font-extrabold 
 }
 .testimonail__card{
-    @apply px-[1rem] 
+    @apply px-[1rem] pt-[2.5rem]
 }
 .testimonail__card p{
-    @apply text-gray-500 w-[25rem]  pb-[1rem]
+    @apply text-gray-500 w-[25rem]  pb-[1rem] text-[19px]
 }
 .testimonail__icons ul{
-    @apply flex text-primary gap-[.5rem] pb-[1.5rem]
+    @apply text-[20px] flex text-primary gap-[.5rem] pb-[1.5rem]
 }
 .teacher img{
     @apply w-[3.8rem] h-[3.8rem]
@@ -425,13 +473,16 @@
 .teacher__name p{
     @apply text-[16px] font-semibold text-primary
 }
+.testimonail .tns-controls{
+    @apply flex justify-between absolute top-[100%]
+}
 
 
 
 
 /*-----------------------newsletter----------------------*/
 .news__letter{
-    @apply bg-primary m-[2rem] rounded h-[20rem]
+    @apply absolute  bg-primary m-[2rem] rounded h-[20rem]
 }
 .news__title h2{
     @apply text-white text-[27px] font-semibold
@@ -447,7 +498,7 @@
 
 /*-----------------------middle-footer----------------------*/
 .footer__middle {
-    @apply bg-dark
+    @apply bg-dark top-[-8rem]
 }
 .description__area img{
     @apply mx-auto pt-[12rem] pb-[2rem]
@@ -461,7 +512,7 @@
     lg:grid lg:grid-cols-4
 }
 .social-icons i{
-    @apply border-[1px] border-white h-[2.2rem] w-[2.2rem] items-center leading-[36px] text-center rounded hover:bg-primary transition-all
+    @apply duration-500 border-[1px] border-white hover:border-primary h-[2.2rem] w-[2.2rem] items-center leading-[36px] text-center rounded hover:bg-primary transition-all
 }
 .nav_menu1 h2{
     @apply text-[1.5rem] font-bold pt-[2rem] pb-[1.5rem]
@@ -470,7 +521,7 @@
     @apply text-[1.2rem]
 }
 .menu__container ul li {
-    @apply pb-[1rem] hover:text-primary transition-all
+    @apply duration-700 pb-[1rem] hover:text-primary transition-all
 }
 .custom__html h2{
     @apply text-[1.5rem] pt-[1.5rem] pb-[1rem]
@@ -492,28 +543,12 @@
     
 }
 .text-right li{
-    @apply  hover:text-primary transition-all text-[1rem]
+    @apply duration-700  hover:text-primary transition-all text-[1rem]
 }
 .row{
     @apply border-t-[1px]
 lg:flex lg:justify-between lg:items-center
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

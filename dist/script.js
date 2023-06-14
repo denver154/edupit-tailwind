@@ -7,16 +7,11 @@ toggleMenu.addEventListener('click', ()=>{
     closeCNav();
 });
 
-
-
-//drop down
-const nav = document.querySelectorAll(".header__nav a");
-nav.forEach((baba) => {
-  baba.addEventListener("click", () => {
-    baba.nextElementSibling.classList.toggle("open");
-    baba.querySelector("i").classList.toggle("open");
-  });
-});
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 var mybutton = document.getElementById("myBtn");
 
@@ -37,7 +32,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 
 
 

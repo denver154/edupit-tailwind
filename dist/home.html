@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<header class="header">
+<!-- <header class="header">
             <div class="header__wrapper">
                 <div class="branding">
                     <img src="./img/logo2.png" alt="">
@@ -161,26 +161,58 @@
                         </div>
                     </div>
             </div>
+</header> -->
+
+<header class="first__header">
+    <div class="container">
+        <div class="first__header__wrapper">
+            <div class="imahe">
+                <img src="./img/logo2.png" alt="">
+            </div>
+        </div>
+    </div>
 </header>
 
 <section class="banner">
     <div class="container">
         <div class="banner__wrapper">
-            <!-- <div class="branding">
-                <img src="./img/bannerlogo.png" alt="">
-            </div> -->
-            <div class="banner__bg__text">
-                <h4 class="text__stroke">EDUPIT</h4>
-            </div>
-            <div class="banner__text">
-                <h1>Education is the Backbone of the Nation</h1>
-                <p>Get the most reduction in your team's operating creates</p>
-                <p>amazing UUI/UX experiences.</p>
-                <div class="animate__animated animate__bounce banner__btn">
-                    <a href="">START TRIAL</a>
-                    <a href="">VIEW COURSES</a>
+            <div class="banner__item">
+                <div class="banner__card">
+                    <div class="branding">
+                        <img src="./img/bannerlogo.png" alt="">
+                    </div>
+                    <div class="banner__bg__text">
+                        <h4 class="text__stroke">EDUPIT</h4>
+                    </div>
+                    <div class="banner__text">
+                        <h1>Education is the Backbone of the Nation</h1>
+                        <p>Get the most reduction in your team's operating creates</p>
+                        <p>amazing UUI/UX experiences.</p>
+                        <div class="banner__btn">
+                            <a href="">START TRIAL</a>
+                            <a href="">VIEW COURSES</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner__card">
+                    <div class="branding">
+                        <img src="./img/bannerlogo.png" alt="">
+                    </div>
+                    <div class="banner__bg__text">
+                        <h4 class="text__stroke">EDUPIT</h4>
+                    </div>
+                    <div class="banner__text">
+                        <h1>Education is the Backbone of the Nation</h1>
+                        <p>Get the most reduction in your team's operating creates</p>
+                        <p>amazing UUI/UX experiences.</p>
+                        <div class="banner__btn">
+                            <a href="">START TRIAL</a>
+                            <a href="">VIEW COURSES</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+          
         </div>
     </div>
 </section>
@@ -230,7 +262,6 @@
                         <p>Student (500)</p>
                     </div>
                 </div>
-
         </div>
     </div>
 </section>
@@ -244,7 +275,7 @@
             <div class="school__text">
                 <h1>ALL EDUTIT SCHOOL, ALL THE TIME</h1>
                 <h1>We Are Experts Learning Institution</h1>
-            </div>
+            
             <div class="other__hand">
                 <div class="hand">
                     <span></span>
@@ -258,7 +289,7 @@
                 <div class="succes__bar">
                     <div class="success__bar__circle"></div>
                 </div>
-               <div class="gallery">
+            <div class="gallery">
             <div class="gallery__wrapper">
                 <div class="gallery__item">
                     <div class="gallery__item__img">
@@ -285,8 +316,14 @@
                         <img src="./img/college house.jpg" alt="">
                     </div>
                 </div>
+                <div class="gallery__item">
+                    <div class="gallery__item__img">
+                        <img src="./img/academic crown.jpg" alt="">
+                    </div>
+                </div>
             </div>
-           </div>   
+           </div> 
+        </div>  
         </div>
     </div>
 </section>
@@ -539,6 +576,20 @@
                         </ul>
                     </div>
                 </div>
+                <div class="instructors__cards">
+                    <img src="./img/chris anderson.jpg" alt="">
+                    <div class="instructors__name">
+                        <a href="">Chris Anderson</a>
+                        <p>PARTNER</p>
+                    </div>
+                    <div class="instructors__icons">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -708,9 +759,10 @@
                 <img src="./img/real student.png" alt="">
             </div>
             <div class="testimonail__title">
-                <span>Testimonail</span>
-                <h1>What our students have to say from real students</h1>
-            </div>
+                <div class="first___title">
+                    <span>Testimonail</span>
+                    <h1>What our students have to say from real students</h1>
+                </div>
             <div class="testimonail__item">
                 <div class="testimonail__card">
                     <div class="testimonail__icons">
@@ -789,6 +841,7 @@
                 </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </section>
@@ -936,11 +989,37 @@
     
 </footer>
 
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+
     <script src="./script.js"></script>
-    
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script type="module">
+          var slider = tns({
+        container: '.banner__item',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        axis: 'horizontal',
+        controls: false,
+        nav: true,
+        navPosition: 'bottom',
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        responsive:{
+            1024:{
+            items: 1,
+            nav: false,
+            controls: true,
+            controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+            slideBy: 1
+        }
+        }
+    });
+
+
     var slider = tns({
         container: '.gallery__wrapper',
         items: 2,
@@ -957,7 +1036,7 @@
             1024:{
             items: 5,
             nav: false,
-            controls: true,
+            controls: false,
             controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
             slideBy: 1,
             autoplay: true,
@@ -985,6 +1064,8 @@
         }
         }
     });
+
+
     var slider = tns({
         container: '.instructors__items',
         items: 1,
@@ -1040,7 +1121,7 @@
         mouseDrag: true,
         responsive:{
             1024:{
-            items: 2,
+            items: 1,
             nav: false,
             controls: true,
             controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
