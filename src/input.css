@@ -6,6 +6,36 @@
     @apply mx-auto p-[1.5rem] w-full max-w-[140rem] lg:max-w-[80rem];
 }
 
+.btn--solid{
+    @apply inline-block text-light text-[1.2rem] bg-primary px-[1.5rem] py-[.5rem] rounded-md font-semibold transition-all border-[1px] border-transparent hover:bg-dark hover:transition-all
+}
+.btn--outline{
+    @apply inline-block text-primary text-[1.2rem] bg-transparent px-[1.5rem] py-[.5rem] rounded-md font-semibold transition-all border-[1px] border-primary hover:bg-primary hover:transition-all hover:text-light
+}
+
+@layer utilities{
+    .btn{
+        @apply py-[.7rem] px-[1.5rem];
+    }
+
+    .btn.green{
+        @apply bg-primary text-light text-[1.1rem] font-medium rounded-[5px];
+    }
+
+    .btn.green:hover{
+        @apply bg-dark text-light;
+    }
+
+    .btn.greenLine{
+        @apply bg-transparent text-primary font-medium border-solid border-[1px] border-primary transition-[.5s] ease-in rounded-[5px];
+    }
+
+    .btn.greenLine:hover{
+        @apply bg-primary text-light border-solid border-[1px] border-primary transition-[.5s] ease-in rounded-[5px];
+    }
+}
+
+
 
 .text__stroke {
     -webkit-text-stroke: 4px #ffffff;
@@ -46,10 +76,93 @@
 @layer components{
 
 
-/*-----------------------first__header----------------------*/
-/* .imahe img{
+/*-----------------------header----------------------*/
+ .header{
+    @apply lg:mt-[5rem] lg:fixed lg:w-full lg:bg-transparent;
+}
+.header .header__wrapper{
+    @apply lg:flex lg:items-center lg:justify-between lg:bg-banner lg:max-w-[75rem] lg:mx-auto lg:rounded-md
+}
+.header .branding{
+    @apply bg-light p-[1.5rem] lg:bg-transparent;
+}
+.header .branding img{
     @apply mx-auto
-} */
+}
+.header__nav__title{
+    @apply bg-primary p-[1rem] flex justify-between items-center lg:bg-transparent lg:hidden
+}
+.header__nav__title h2{
+    @apply text-light font-bold text-[1.3rem]
+}
+.header__nav__title .toggle__menu span{
+    @apply w-[1.5rem] h-[.2rem] bg-light block transition-all
+}
+.header__nav__title .toggle__menu.open span:first-child{
+    @apply transform translate-y-[6px] rotate-[225deg] transition-all
+}
+.header__nav__title .toggle__menu.open span:nth-child(2){
+    @apply opacity-0 transition-all
+}
+.header__nav__title .toggle__menu.open span:last-child{
+    @apply transform translate-y-[-6px] rotate-[-225deg] transition-all
+}
+.header__nav__title .toggle__menu span:nth-child(2){
+    @apply my-[.2rem]
+}
+.header__nav nav{
+    @apply max-h-0 overflow-hidden transition-all lg:max-h-[200rem] lg:flex lg:items-center lg:p-[1.5rem];
+}
+.header__nav nav.open{
+    @apply max-h-[200rem] transition-all
+}
+.header__nav nav li{
+    @apply list-none
+}
+.header__nav .drop__nav h4{
+    @apply flex items-center justify-between border-b-[1px] border-gray-400 px-[1.5rem] py-[.8rem] lg:border-none
+    lg:gap-[.5rem]
+}
+.header__nav .drop__nav h4 p{
+    @apply font-bold text-[1rem] lg:text-light lg:font-normal
+}
+.header__nav .drop__nav .drop__toggle span{
+    @apply w-[.8rem] h-[.2rem] bg-dark block transition-all lg:bg-light lg:h-[.1rem] lg:w-[.5rem];
+}
+.header__nav .drop__nav .drop__toggle span:first-child{
+    @apply lg:transform lg:rotate-[-45deg] lg:translate-x-[5px] lg:translate-y-[.15rem];
+}
+.header__nav .drop__nav .drop__toggle span:last-child{
+    @apply transform rotate-[270deg] translate-y-[-.15rem] lg:rotate-[45deg] lg:translate-y-0;
+}
+
+.header__nav .drop__nav .drop__toggle.open span:last-child{
+    @apply transform rotate-[0deg] transition-all
+}
+.header__nav .drop__content{
+    @apply max-h-0 overflow-hidden transition-all lg:max-h-[20rem] lg:absolute lg:bottom-[-25rem] lg:bg-primary lg:min-w-[10rem] lg:opacity-0 lg:py-[1rem];
+}
+.header__nav .drop__content.open{
+    @apply max-h-[200rem] transition-all;
+}
+.header__nav .drop__content ul li:not(first-child){
+    @apply border-b-[1px] border-gray-400 lg:border-none;
+}
+.header__nav .drop__content ul li{
+    @apply py-[1rem] lg:p-[1rem]
+}
+.header__nav .drop__content ul li a{
+    @apply px-[3rem] text-[.8rem] lg:px-0 lg:text-light lg:text-[1.2rem]
+}
+.header__nav .drop__content ul li:hover{
+    @apply lg:bg-light
+}
+.header__nav .drop__content ul li:hover a{
+    @apply lg:text-primary
+}
+.header__nav nav a.free{
+    @apply hidden lg:block 
+}
 
 
 /*-----------------------banner----------------------*/
@@ -94,7 +207,12 @@
 }
 
 /*-----------------------banner__slider----------------------*/
-
+.banner__slider{
+    @apply relative
+}
+.banner__slider__wrapper{
+    @apply flex gap-[2rem]
+}
 .slider__card{
     @apply border-[2px] border-primary py-[4rem] px-[2rem] hover:shadow-2xl rounded border-opacity-30 transition-all
 }
@@ -109,6 +227,12 @@
 }
 .slider__card p{
     @apply text-[1rem] text-primary
+}
+.banner__slider .tns-controls{
+    @apply flex justify-between top-[7rem] pb-[2rem]
+}
+.banner__slider .tns-controls i{
+    @apply text-white flex items-center justify-center w-[55px] h-[55px] bg-primary p-[1rem] rounded-full hover:border-transparent hover:bg-textcolor duration-500
 }
 
 
@@ -242,14 +366,19 @@
 }
 
 /*-----------------------instructors----------------------*/
+.instructors{
+    @apply relative
+}
 .instructors__cards{
     @apply border-[2px] border-primary border-opacity-30 py-[3rem] rounded hover:border-transparent hover:shadow transition-all
 }
 .instructors__title span{
     @apply text-primary text-[1.5rem] font-extrabold
+    lg:text-[16px] 
 }
 .instructors__title h1{
     @apply pb-[3rem] text-[1.5rem] text-textcolor w-[18rem] font-extrabold
+    lg:text-[40px] lg:w-[30rem]
 }
 .instructors__items{
     @apply flex gap-[2rem]
@@ -276,8 +405,12 @@
     @apply duration-500 text-primary items-center text-center hover:text-white bg-lightpri hover:bg-primary w-[2rem] h-[2rem] rounded transition-all
 }
 .instructors .tns-controls{
-    @apply flex justify-end
+    @apply absolute top-[7rem] left-[74%] flex justify-end  gap-[1.5rem] pb-[2rem]
 }
+.instructors .tns-controls i{
+    @apply text-white flex items-center justify-center w-[55px] h-[55px] bg-primary p-[1rem] rounded-full hover:border-transparent hover:bg-textcolor duration-500
+}
+
 
 
 /*-----------------------facility----------------------*/
@@ -307,7 +440,12 @@
 }
 
 
+
+
 /*-----------------------latest----------------------*/
+.latest{
+    @apply relative
+}
 .latest__title span{
 @apply text-[1.5rem] text-primary font-extrabold
 }
@@ -332,13 +470,17 @@
 .latest__btn a{
     @apply text-[1.2rem] text-textcolor border-[1px]  border-opacity-30 py-[.8rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
 }
+
 .latest .tns-controls{
-    @apply flex justify-end
+    @apply absolute top-[5rem] left-[74%] flex justify-end  gap-[1.5rem] pb-[2rem]
+}
+.latest .tns-controls i{
+    @apply text-white flex items-center justify-center w-[55px] h-[55px] bg-primary p-[1rem] rounded-full hover:border-transparent hover:bg-textcolor duration-500
 }
 
 /*-----------------------textimonail----------------------*/
 .testimonail__title{
-    @apply relative
+    @apply relative 
 }
 .testimonail__wrapper {
     @apply lg:grid lg:grid-cols-2
@@ -351,12 +493,14 @@
 }
 .testimonail__title span{
     @apply text-primary font-extrabold 
+    lg:text-[16px] 
 }
 .testimonail__title h1{
     @apply  text-textcolor font-extrabold 
+    lg:text-[40px] lg:w-[40rem]
 }
 .testimonail__card{
-    @apply px-[1rem] pt-[2.5rem]
+    @apply lg:px-[4rem] pt-[2.5rem]
 }
 .testimonail__card p{
     @apply text-gray-500 w-[25rem]  pb-[1rem] text-[19px]
@@ -380,30 +524,77 @@
     @apply text-[16px] font-semibold text-primary
 }
 .testimonail .tns-controls{
-    @apply flex justify-between absolute top-[100%]
+    @apply left-[4rem] flex justify-between gap-[1.5rem] absolute top-[100%] duration-500
+}
+.testimonail  .tns-controls i{
+    @apply text-white flex items-center justify-center w-[55px] h-[55px] bg-primary p-[.5rem] rounded-full hover:border-transparent hover:bg-textcolor duration-500
 }
 
 /*-----------------------onlinepage----------------------*/
-.onlinepage__title{
-    @apply text-center pb-[1.5rem]
+ .onlinepage{
+    @apply pt-[2rem] pb-[2rem];
 }
-.onlinepage__title span{
-    @apply font-extrabold text-[1.5rem] text-primary
+
+.onlinepage__wrapper{
+    @apply mt-[1.5rem];
 }
-.onlinepage__title h1{
-    @apply text-textcolor font-extrabold text-[1.5rem] w-[25rem] mx-auto
+
+.onlinepage-title h3{
+    @apply text-center text-primary font-bold text-[1.5rem];
 }
-.page__branding{
-    @apply border-[2px] border-primary border-opacity-25 hover:border-transparent hover:shadow duration-500
+
+.onlinepage-title h4{
+    @apply text-dark font-bold text-[1.6rem] text-center w-[23rem] mx-auto leading-[1.2];
 }
-.admin{
-    @apply m-[2rem]
+
+.onlinepage-item{
+    @apply border-primary border-solid border-[2px] border-opacity-50 p-[2rem] transition-[.5s] ease-in shadow-2xl;
 }
-.admin p{
-    @apply py-[1rem] text-primary font-semibold text-[1.2rem]
+
+.onlinepage-item:hover{
+    @apply border-opacity-0 transition-[.5s] ease-in;
 }
-.admin a{
-    @apply text-[1.5rem] font-extrabold w-[25rem] text-textcolor hover:text-primary duration-500
+
+.onlinepage-item:last-child{
+    @apply mt-[3rem];
+}
+
+.onlinepage-text{
+    @apply mt-[1rem];
+}
+
+.onlinepage-text h4{
+    @apply text-primary font-bold text-[1rem] mb-[.8rem];
+}
+
+.onlinepage-text a{
+    @apply text-dark font-bold text-[1.7rem] leading-[1] transition-[.5s] ease-in;
+}
+.onlinepage-text a:hover{
+    @apply text-primary transition-[.5s] ease-in;
+}
+.onlinepage-btn{
+    @apply mt-[3rem];
+}
+
+@media (min-width:1080px){
+    .onlinepage-title h3{
+        @apply text-[1rem];
+    }
+    .onlinepage-title h4{
+        @apply text-[3rem] w-[40rem];
+    }
+    .onlinepage__wrapper{
+        @apply flex items-center gap-[1.8rem] mt-[2rem];
+    }
+    .onlinepage-item:last-child{
+        @apply mt-0;
+    }
+    .onlinepage-item{
+        @apply flex items-center gap-[2rem];
+    }
+
+
 }
 
 

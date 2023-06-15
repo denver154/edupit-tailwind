@@ -5,12 +5,14 @@ module.exports = {
     extend: {
       colors:{
         primary: "#0EB582",
+        light: '#ffffff',
         dark:"#18406B",
         textcolor:"#2A374C",
         green:"#31AF36",
         grayy:"#777777",
         edupit:"#123A67",
         lightpri:'#dbf4ec',
+        banner: '#4A80B0',
       },
       keyframes: {
         sliding1:{
