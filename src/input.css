@@ -6,9 +6,7 @@
     @apply mx-auto p-[1.5rem] w-full max-w-[140rem] lg:max-w-[80rem];
 }
 
-.gallery .tns-outer{
-    @apply max-w-[20rem]
-}
+
 .text__stroke {
     -webkit-text-stroke: 4px #ffffff;
     text-stroke: 4px #ffffff;
@@ -46,186 +44,6 @@
 
 
 @layer components{
-/* .allmenu{
-    @apply bg-primary
-}    
-.branding img{
-    @apply mx-auto py-[1rem]
-}
-.whatsmenu {
-    @apply py-[1rem] mx-[1rem] flex justify-between text-white 
-}
-.whatsmenu h1{
-    @apply text-[1.1rem] font-extrabold
-}
-
-.toggle__menu.open span{
-    @apply z-10 bg-white
-}
-
-.toggle__menu span{
-    @apply w-[1.5rem] h-[.3rem] bg-white block transition ease-in-out duration-500
-}
-
-.toggle__menu span:nth-child(2){
-    @apply my-[.2rem]
-}
-
-.toggle__menu.open span:first-child{
-    @apply translate-y-[8px] rotate-[-230deg] transition ease-in-out duration-500;
-}
-
-.toggle__menu.open span:nth-child(2){
-    @apply opacity-0 transition ease-in-out duration-500;
-}
-
-.toggle__menu.open span:last-child{
-    @apply translate-y-[-8px] rotate-[230deg] transition ease-in-out duration-500;
-}
-
-.branding{
-    @apply flex justify-between items-center;
-}
-.branding ul li{
-    @apply py-2;
-}
-.branding ul li i{
-    @apply text-primary mr-2;
-}
-.header__nav{
-    @apply   max-h-0 overflow-hidden  
-}
-.header__nav ul{
-    @apply transition-all;
-}
-.header__nav ul li{
-    @apply my-1  transition-all;
-}
-.header__nav ul li a{
-    @apply flex items-center relative justify-between p-4  hover:text-white hover:bg-primary  transition-all;
-}
-.header__nav ul li a span{
-    @apply hidden w-full h-[.3rem]  absolute bg-primary -left-5 opacity-0;
-}
-.header__nav li:hover a span{
-    @apply left-0 opacity-100 transition-all;
-}
-.header__nav ul li:hover .dropdown{
-    @apply  opacity-100 transition-all;
-}
-.header__nav ul li a {
-    @apply  transition-all;
-}
-.header__nav ul li a span.open{
-    @apply rotate-180 transition-all;
-}
-.header__nav.open{
-    @apply duration-500 transition-all max-h-fit;
-}
-.dropdown{
-    @apply max-h-0 bg-white overflow-hidden transition-all duration-500;
-}
-.dropdown ul{
-    @apply flex-col my-3 lg:mx-3;
-}
-.dropdown ul li{
-    @apply lg:border-t-0;
-}
-.dropdown ul li a{
-    @apply h-[1rem] px-10 py-5;
-}
-.dropdown.open{
-    @apply max-h-full transition-all;
-} */
-
-
- /*HEADER*/
- .header{
-    @apply lg:mt-[5rem] lg:fixed lg:w-full lg:bg-transparent;
-}
-.header .header__wrapper{
-    @apply lg:flex lg:items-center lg:justify-between lg:bg-bannerbg lg:max-w-[75rem] lg:mx-auto lg:rounded-md
-}
-.header .branding{
-    @apply bg-lightpri p-[1.5rem] lg:bg-transparent;
-}
-.header .branding img{
-    @apply mx-auto
-}
-.header__nav__title{
-    @apply bg-primary p-[1rem] flex justify-between items-center lg:bg-transparent lg:hidden
-}
-.header__nav__title h2{
-    @apply text-lightpri font-bold text-[1.3rem]
-}
-.header__nav__title .toggle__menu span{
-    @apply w-[1.5rem] h-[.2rem] bg-lightpri block transition-all
-}
-.header__nav__title .toggle__menu.open span:first-child{
-    @apply transform translate-y-[6px] rotate-[225deg] transition-all
-}
-.header__nav__title .toggle__menu.open span:nth-child(2){
-    @apply opacity-0 transition-all
-}
-.header__nav__title .toggle__menu.open span:last-child{
-    @apply transform translate-y-[-6px] rotate-[-225deg] transition-all
-}
-.header__nav__title .toggle__menu span:nth-child(2){
-    @apply my-[.2rem]
-}
-.header__nav nav{
-    @apply max-h-0 overflow-hidden transition-all lg:max-h-[200rem] lg:flex lg:items-center lg:p-[1.5rem];
-}
-.header__nav nav.open{
-    @apply max-h-[200rem] transition-all
-}
-.header__nav nav li{
-    @apply list-none
-}
-.header__nav .drop__nav h4{
-    @apply flex items-center justify-between border-b-[1px] border-gray-400 px-[1.5rem] py-[.8rem] lg:border-none
-    lg:gap-[.5rem]
-}
-.header__nav .drop__nav h4 p{
-    @apply font-bold text-[1rem] lg:text-lightpri lg:font-normal
-}
-.header__nav .drop__nav .drop__toggle span{
-    @apply w-[.8rem] h-[.2rem] bg-dark block transition-all lg:bg-lightpri lg:h-[.1rem] lg:w-[.5rem];
-}
-.header__nav .drop__nav .drop__toggle span:first-child{
-    @apply lg:transform lg:rotate-[-45deg] lg:translate-x-[5px] lg:translate-y-[.15rem];
-}
-.header__nav .drop__nav .drop__toggle span:last-child{
-    @apply transform rotate-[270deg] translate-y-[-.15rem] lg:rotate-[45deg] lg:translate-y-0;
-}
-
-.header__nav .drop__nav .drop__toggle.open span:last-child{
-    @apply transform rotate-[0deg] transition-all
-}
-.header__nav .drop__content{
-    @apply max-h-0 overflow-hidden transition-all lg:max-h-[20rem] lg:absolute lg:bottom-[-25rem] lg:bg-primary lg:min-w-[10rem] lg:opacity-0 lg:py-[1rem];
-}
-.header__nav .drop__content.open{
-    @apply max-h-[200rem] transition-all;
-}
-.header__nav .drop__content ul li:not(first-child){
-    @apply border-b-[1px] border-gray-400 lg:border-none;
-}
-.header__nav .drop__content ul li{
-    @apply py-[1rem] lg:p-[1rem]
-}
-.header__nav .drop__content ul li a{
-    @apply px-[3rem] text-[.8rem] lg:px-0 lg:text-lightpri lg:text-[1.2rem]
-}
-.header__nav .drop__content ul li:hover{
-    @apply lg:bg-lightpri
-}
-.header__nav .drop__content ul li:hover a{
-    @apply lg:text-primary
-}
-.header__nav nav a.free{
-    @apply hidden lg:block 
-}
 
 
 /*-----------------------first__header----------------------*/
@@ -576,7 +394,7 @@
     @apply text-textcolor font-extrabold text-[1.5rem] w-[25rem] mx-auto
 }
 .page__branding{
-    @apply border-[2px] border-primary border-opacity-25
+    @apply border-[2px] border-primary border-opacity-25 hover:border-transparent hover:shadow duration-500
 }
 .admin{
     @apply m-[2rem]
@@ -591,17 +409,26 @@
 
 
 /*-----------------------newsletter----------------------*/
+.news{
+    @apply translate-y-[10rem]
+}
 .news__letter{
-    @apply absolute  bg-primary m-[2rem] rounded h-[20rem]
+    @apply bg-primary m-[2rem] rounded h-[20rem]
 }
 .news__title h2{
-    @apply text-white text-[27px] font-semibold
+    @apply text-white text-[27px] font-semibold pt-[3rem]
 }
 .news__title p{
-    @apply text-white
+    @apply text-white pb-[2rem] text-[1.2rem]
 }
 .mc4wp-form-fields input{
-    @apply outline-none
+    @apply outline-none w-[20rem] 
+}
+.mc4wp-form-fields placeholder{
+    @apply pl-[2rem]
+}
+.shortcode_content{
+    @apply lg:flex
 }
 
 
@@ -619,7 +446,7 @@
 }
 .middle__row{
     @apply text-center text-white
-    lg:grid lg:grid-cols-4
+    lg:grid lg:grid-cols-4 lg:pt-[10rem]
 }
 .social-icons i{
     @apply duration-500 border-[1px] border-white hover:border-primary h-[2.2rem] w-[2.2rem] items-center leading-[36px] text-center rounded hover:bg-primary transition-all
