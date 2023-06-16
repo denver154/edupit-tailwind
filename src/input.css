@@ -15,23 +15,13 @@
 
 @layer utilities{
     .btn{
-        @apply py-[.7rem] px-[1.5rem];
+        @apply p-3 rounded-md;
     }
-
     .btn.green{
-        @apply bg-primary text-light text-[1.1rem] font-medium rounded-[5px];
+        @apply bg-[hsl(161.68,85.64%,38.24%)] text-white font-semibold hover:bg-[#444] transition-all duration-500;
     }
-
-    .btn.green:hover{
-        @apply bg-dark text-light;
-    }
-
-    .btn.greenLine{
-        @apply bg-transparent text-primary font-medium border-solid border-[1px] border-primary transition-[.5s] ease-in rounded-[5px];
-    }
-
-    .btn.greenLine:hover{
-        @apply bg-primary text-light border-solid border-[1px] border-primary transition-[.5s] ease-in rounded-[5px];
+    .btn.green-outline{
+        @apply border-[.1rem] font-semibold border-[hsl(161.68,85.64%,38.24%)] text-[hsl(161.68,85.64%,38.24%)] hover:bg-[hsl(161.68,85.64%,38.24%)] hover:text-white transition-all duration-500;
     }
 }
 
@@ -77,135 +67,191 @@
 
 
 /*-----------------------header----------------------*/
- .header{
-    @apply lg:mt-[5rem] lg:fixed lg:w-full lg:bg-transparent;
+.header__wrapper:first-child{
+    @apply py-2 lg:bg-[hsl(161.68,85.64%,38.24%)];
 }
-.header .header__wrapper{
-    @apply lg:flex lg:items-center lg:justify-between lg:bg-banner lg:max-w-[75rem] lg:mx-auto lg:rounded-md
+.header__content{
+    @apply flex items-center w-full max-w-[100rem] mx-auto justify-center lg:justify-between;
 }
-.header .branding{
-    @apply bg-light p-[1.5rem] lg:bg-transparent;
+.header__text{
+    @apply hidden  lg:flex items-center text-white gap-4 font-semibold;
 }
-.header .branding img{
-    @apply mx-auto
+.header__text a{
+    @apply flex items-center;
 }
-.header__nav__title{
-    @apply bg-primary p-[1rem] flex justify-between items-center lg:bg-transparent lg:hidden
+.header__icons{
+    @apply hidden lg:flex items-center gap-3 text-white text-[1.4rem] ;
 }
-.header__nav__title h2{
-    @apply text-light font-bold text-[1.3rem]
+.header__icons a{
+    @apply hover:text-black transition-all duration-500;
 }
-.header__nav__title .toggle__menu span{
-    @apply w-[1.5rem] h-[.2rem] bg-light block transition-all
+.header__actions {
+    @apply hidden lg:block;
 }
-.header__nav__title .toggle__menu.open span:first-child{
-    @apply transform translate-y-[6px] rotate-[225deg] transition-all
+.header__actions {
+    @apply hidden lg:block text-white font-semibold;
 }
-.header__nav__title .toggle__menu.open span:nth-child(2){
-    @apply opacity-0 transition-all
+.header__actions a:first-child{
+    @apply border-r-2;
 }
-.header__nav__title .toggle__menu.open span:last-child{
-    @apply transform translate-y-[-6px] rotate-[-225deg] transition-all
+.header__actions a{
+    @apply px-5 ;
 }
-.header__nav__title .toggle__menu span:nth-child(2){
-    @apply my-[.2rem]
+.header__actions a i{
+    @apply mx-2;
 }
-.header__nav nav{
-    @apply max-h-0 overflow-hidden transition-all lg:max-h-[200rem] lg:flex lg:items-center lg:p-[1.5rem];
+.header__logo{
+    @apply lg:hidden;
 }
-.header__nav nav.open{
-    @apply max-h-[200rem] transition-all
+.header__wrapper:last-child{
+    @apply lg:fixed lg:w-full lg:top-[5rem] z-50 transition-all duration-500;
 }
-.header__nav nav li{
-    @apply list-none
+.header__wrapper:last-child.top{
+    @apply lg:top-0 transition-all duration-500;
 }
-.header__nav .drop__nav h4{
-    @apply flex items-center justify-between border-b-[1px] border-gray-400 px-[1.5rem] py-[.8rem] lg:border-none
-    lg:gap-[.5rem]
+.header__brand{
+    @apply hidden lg:block lg:py-2;
 }
-.header__nav .drop__nav h4 p{
-    @apply font-bold text-[1rem] lg:text-light lg:font-normal
+.header__quate{
+    @apply hidden lg:inline-block w-[11rem] text-[1.2rem] mx-auto;
 }
-.header__nav .drop__nav .drop__toggle span{
-    @apply w-[.8rem] h-[.2rem] bg-dark block transition-all lg:bg-light lg:h-[.1rem] lg:w-[.5rem];
+.header__container{
+    @apply flex flex-col items-center justify-between lg:flex-row lg:bg-[hsl(211.08,63.36%,25.69%)] lg:p-[1.5rem] lg:rounded-md lg:w-full lg:max-w-[80rem] lg:mx-auto;
 }
-.header__nav .drop__nav .drop__toggle span:first-child{
-    @apply lg:transform lg:rotate-[-45deg] lg:translate-x-[5px] lg:translate-y-[.15rem];
+.header__wrapper h6{
+    @apply bg-[hsl(161.68,85.64%,38.24%)] lg:hidden w-full lg:w-fit px-4 py-2 relative text-white font-bold text-[1.5rem] lg:bg-transparent; 
 }
-.header__nav .drop__nav .drop__toggle span:last-child{
-    @apply transform rotate-[270deg] translate-y-[-.15rem] lg:rotate-[45deg] lg:translate-y-0;
+.header__wrapper ul{
+    @apply bg-white w-full h-0 overflow-hidden lg:overflow-visible transition-all left-0 top-[3.2rem] lg:bg-transparent lg:h-fit lg:flex lg:items-center lg:justify-center;
 }
-
-.header__nav .drop__nav .drop__toggle.open span:last-child{
-    @apply transform rotate-[0deg] transition-all
+.header__wrapper ul.open{
+    @apply h-full transition-all lg:h-fit;
 }
-.header__nav .drop__content{
-    @apply max-h-0 overflow-hidden transition-all lg:max-h-[20rem] lg:absolute lg:bottom-[-25rem] lg:bg-primary lg:min-w-[10rem] lg:opacity-0 lg:py-[1rem];
+.header__wrapper ul li{
+    @apply py-3 text-[#444] lg:text-white font-semibold border-t-2 relative lg:border-0;
 }
-.header__nav .drop__content.open{
-    @apply max-h-[200rem] transition-all;
+.header__wrapper ul li a{
+    @apply pl-4 flex items-center;
 }
-.header__nav .drop__content ul li:not(first-child){
-    @apply border-b-[1px] border-gray-400 lg:border-none;
+.header__wrapper ul li a span::before{
+    @apply content-[""] absolute block bg-[#444] w-4 h-1 right-[1rem] transition-all duration-500 lg:hidden;
 }
-.header__nav .drop__content ul li{
-    @apply py-[1rem] lg:p-[1rem]
+.header__wrapper ul li a span::after{
+    @apply content-[""] absolute block bg-[#444] w-1 h-4 right-[1.4rem] -translate-y-[.38rem] transition-all duration-500 lg:hidden;
 }
-.header__nav .drop__content ul li a{
-    @apply px-[3rem] text-[.8rem] lg:px-0 lg:text-light lg:text-[1.2rem]
+.header__wrapper ul li a.open span::after{
+    @apply hidden transition-all duration-500;
 }
-.header__nav .drop__content ul li:hover{
-    @apply lg:bg-light
+.header__wrapper ul li a i{
+    @apply px-2 hidden lg:block;
 }
-.header__nav .drop__content ul li:hover a{
-    @apply lg:text-primary
+.dropdown{
+    @apply z-10 h-full max-h-0 overflow-hidden transition-all lg:absolute lg:translate-y-10 lg:opacity-0 lg:top-[3rem] lg:left-0;
 }
-.header__nav nav a.free{
-    @apply hidden lg:block 
+.header__wrapper ul li:hover .dropdown{
+    @apply lg:overflow-visible lg:max-h-[20rem] lg:opacity-100 lg:translate-y-0 transition-all;
+}
+.dropdown.open{
+    @apply max-h-[50rem] transition-all duration-500;
+}
+.dropdown ul{
+    @apply flex flex-col top-0 mt-3 lg:m-0 h-full lg:h-fit lg:bg-[hsl(161.68,85.64%,38.24%)] transition-all duration-500;
+}
+.dropdown ul li{
+    @apply font-normal lg:w-[15rem] lg:hover:bg-white lg:hover:text-primary transition-all relative duration-500;
+}
+.dropdown ul li a{
+    @apply hover:text-[hsl(161.68,85.64%,38.24%)] transition-all ml-[2rem] lg:m-0;
+}
+.dropdown ul li a::before{
+    @apply hidden;
+}
+.dropdown ul li a::after{
+    @apply hidden;
+}
+.dropdown ul li:hover .dropdown.children ul{
+    @apply lg:opacity-100 lg:top-[-2rem] transition-all duration-500;
+}
+.dropdown ul li:hover .dropdown.children-portfolio ul{
+    @apply lg:opacity-0 transition-all duration-500;
+}
+.dropdown.children ul{
+    @apply lg:opacity-0 lg:m-0 lg:absolute lg:left-[15rem] lg:w-fit lg:top-[2rem] transition-all duration-500;
+}
+.dropdown.children ul li{
+    @apply relative transition-all;
+}
+.dropdown.children ul li a{
+    @apply px-[2rem] transition-all;
+}
+.dropdown.children-portfolio ul{
+    @apply lg:opacity-0 lg:invisible lg:absolute lg:py-[1rem] lg:left-[-15rem] lg:max-h-fit lg:w-fit lg:top-0 lg:translate-y-5 transition-all duration-500;
+}
+.dropdown.children ul li:hover .dropdown.children-portfolio ul{
+    @apply lg:opacity-100 lg:visible lg:-translate-y-2 transition-all duration-500;
+}
+.dropdown.children-portfolio ul li a{
+    @apply px-[4rem] lg:px-[1rem] w-[20rem] transition-all;
+}
+.toggle__menu{
+    @apply absolute right-5 top-[35%] lg:hidden;
+}
+.toggle__menu span{
+    @apply block bg-white h-[.2rem] w-[2rem] rounded-full;
+}
+.toggle__menu span:nth-child(2){
+    @apply my-1;
+}
+.toggle__menu.open span:first-child{
+    @apply rotate-[45deg] translate-y-2;
+}
+.toggle__menu.open span:nth-child(2){
+    @apply opacity-0 transition-all;
+}
+.toggle__menu.open span:last-child{
+    @apply rotate-[-45deg] -translate-y-2;
 }
 
 
 /*-----------------------banner----------------------*/
 .banner{
-    @apply relative bg-bannerbg bg-center bg-no-repeat lg:h-[100vh]
+    @apply bg-bannerbg bg-cover h-[50rem] bg-no-repeat relative lg:h-[65rem];
 }
-.branding img{
-    @apply hidden absolute 
-    lg:top-[5rem] lg:right-[5rem] lg:flex 
+.banner .container{
+    @apply max-w-[100rem]
+    lg:relative ;
 }
-.banner__bg__text{
-    @apply absolute top-[25%] left-0 opacity-20
-    lg:left-[14.5rem] 
+.banner__content{
+    @apply flex items-center justify-between
+    lg:mt-[8rem];
 }
-.banner__bg__text h4{
-    @apply text-transparent text-[4rem] font-bold opacity-50
-    lg:text-[8rem] 
+.banner__item{
+    @apply flex items-center;
+}
+.banner__item img{
+    @apply hidden lg:block w-full lg:w-[40rem];
 }
 .banner__text{
-    @apply z-50 py-[10rem] 
+    @apply text-center w-full relative lg:text-left lg:pt-[1rem];
 }
 .banner__text h1{
-    @apply text-[1.5rem] pb-[1rem] text-white font-bold w-[18rem] text-center mx-auto
-    lg:text-[60px] lg:w-[45rem] lg:text-left lg:mx-0
+    @apply absolute left-0 top-0 z-[-1] text-gray-700 opacity-80 stroke-inherit font-bold text-[4rem] leading-none lg:text-[9rem];
+}
+.banner__text h4{
+    @apply text-white text-[2rem] lg:text-[4rem] w-[24rem] lg:w-[46rem] mx-auto lg:m-0 font-bold lg:leading-[6rem];
 }
 .banner__text p{
-    @apply text-white w-[28rem] mx-auto text-center font-semibold
-    lg:text-[20px] lg:w-[40rem] lg:text-left lg:mx-0
+    @apply text-white text-[1.5rem] w-[25rem] lg:w-[40rem] mx-auto lg:m-0 mb-5;
 }
-.banner__btn{
-    @apply flex justify-center gap-[1rem] mt-[3.5rem]
-    lg:justify-start
-   
+.banner__actions{
+    @apply text-[1.2rem] my-[2rem] w-full lg:w-fit;
 }
-.banner__btn a{
-    @apply duration-700 text-white bg-primary py-[1rem] px-[1.5rem] rounded text-[1rem] hover:bg-black hover:text-white transition-all
-    
+.banner .tns-controls{
+    @apply flex justify-between absolute  w-full  top-[25rem] mx-[2rem]
 }
-.banner__btn a:last-child{
-    @apply duration-700 bg-transparent  border-[1px] border-primary text-primary py-[1rem] px-[1.5rem] rounded hover:bg-primary hover:text-white transition-all
-
+.banner .tns-controls i{
+    @apply text-white flex items-center justify-center w-[55px] h-[55px] bg-primary p-[1rem] rounded-full hover:border-transparent hover:bg-textcolor duration-500
 }
-
 /*-----------------------banner__slider----------------------*/
 .banner__slider{
     @apply relative
@@ -530,6 +576,8 @@
     @apply text-white flex items-center justify-center w-[55px] h-[55px] bg-primary p-[.5rem] rounded-full hover:border-transparent hover:bg-textcolor duration-500
 }
 
+
+
 /*-----------------------onlinepage----------------------*/
  .onlinepage{
     @apply pt-[2rem] pb-[2rem];
@@ -576,6 +624,39 @@
 .onlinepage-btn{
     @apply mt-[3rem];
 }
+.testimonials__card__actions{
+    @apply h-[5rem] relative;
+}
+.testimonials__card__actions span{
+    @apply inline-block mt-[1rem] z-20 bg-primary w-[2rem] h-[2rem] rounded-full relative transition-all duration-500;
+} 
+.testimonials__card__actions span::before{
+    @apply content-[""] block absolute w-[.8rem] lg:w-[.9rem] h-1 bg-white left-[30%] top-[45%];
+} 
+.testimonials__card__actions span::after{
+    @apply content-[""] block absolute w-1 h-[.8rem] bg-white left-[45%] top-[30%];
+} 
+.testimonials__card__actions a{
+    @apply absolute inline-block w-[7rem] text-center lg:w-[9rem] h-[2rem] lg:h-[2.5rem] lg:text-[1.5rem] opacity-0 left-0 top-0 text-white font-bold p-1 rounded-md transition-all duration-500;
+} 
+.testimonials__card__actions a::after{
+    @apply content-[""] block absolute top-0 left-0 rounded-md bg-primary w-0 h-full z-[-1] transition-all duration-500;
+}
+.testimonials__card:hover .testimonials__card__actions a::after{
+    @apply w-full h-full transition-all duration-500;
+}
+.testimonials__card:hover .testimonials__card__actions a{
+    @apply opacity-100 transition-all duration-500;
+}
+.testimonials__card:hover .testimonials__card__actions span{
+    @apply w-0 h-0 transition-all duration-500;
+}
+.testimonials__card:hover .testimonials__card__actions span::before{
+    @apply opacity-0 transition-all duration-500;
+}
+.testimonials__card:hover .testimonials__card__actions span::after{
+    @apply opacity-0 transition-all duration-500;
+}
 
 @media (min-width:1080px){
     .onlinepage-title h3{
@@ -595,33 +676,43 @@
     }
 
 
+
 }
 
 
 
 /*-----------------------newsletter----------------------*/
 .news{
-    @apply translate-y-[10rem]
+    @apply translate-y-[10rem] lg:relative
 }
 .news__letter{
     @apply bg-primary m-[2rem] rounded h-[20rem]
+    lg:w-[75rem] lg:mx-auto lg:h-[15rem] lg:items-center lg:flex
 }
 .news__title h2{
-    @apply text-white text-[27px] font-semibold pt-[3rem]
+    @apply text-white text-[27px] font-semibold pt-[1rem]
+    lg:text-[40px]
 }
 .news__title p{
     @apply text-white pb-[2rem] text-[1.2rem]
 }
 .mc4wp-form-fields input{
-    @apply outline-none w-[20rem] 
+    @apply outline-none w-[23rem] rounded pl-[2rem] py-[1rem] text-[1rem]
+    
 }
-.mc4wp-form-fields placeholder{
-    @apply pl-[2rem]
+.witr_shortcode_form button{
+    @apply bg-textcolor text-white w-[23rem] py-[.5rem] rounded hover:bg-dark duration-500
+    lg:w-[10rem] 
+}
+.witr_shortcode_form form{
+    @apply pb-[1rem] lg:pb-0
 }
 .shortcode_content{
+    @apply lg:flex lg:justify-between lg:items-center
+}
+.witr_shortcode_form{
     @apply lg:flex
 }
-
 
 
 /*-----------------------middle-footer----------------------*/
